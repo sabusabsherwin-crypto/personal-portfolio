@@ -1,0 +1,31 @@
+/* Laptop */
+@media (max-width:1100px){
+  .about__cards{grid-template-columns:repeat(2,1fr)}
+  .skills{grid-template-columns:repeat(2,1fr)}
+}
+/* Tablet */
+@media (max-width:900px){
+  .section{padding:5rem 0}
+  .hero{padding-bottom:5rem}
+  .hero__grid{grid-template-columns:1fr;gap:2rem}
+  .hero__visual{order:-1;max-height:300px}
+  .orb{width:min(280px,70vw)}
+  .project{grid-template-columns:1fr;gap:1.5rem}
+  .project__body{padding:0 .5rem .5rem}
+  .scroll-ind{display:none}
+}
+/* Mobile: slide-down menu */
+@media (max-width:760px){
+  .nav__toggle{display:block}
+  .nav__links{position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;gap:0;background:rgba(11,11,13,.97);border-bottom:1px solid var(--border);max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+  .nav__links.is-open{max-height:420px}
+  .nav__links a{padding:1rem 4%;border-top:1px solid var(--border);font-size:1.05rem}
+  .nav__links a::after{display:none}
+  .nav{background:rgba(11,11,13,.85);backdrop-filter:blur(12px)}
+}
+@media (max-width:560px){
+  .about__cards,.skills{grid-template-columns:1fr}
+  .hero__cta .btn{flex:1;text-align:center}
+  .footer__inner{flex-direction:column;align-items:flex-start}
+  .project__body h3{font-size:1.8rem}
+}

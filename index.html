@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SABUSAB | Aspiring IT Professional</title>
+  <meta name="description" content="Portfolio of an aspiring IT professional building digital solutions, one idea at a time.">
+  <meta name="theme-color" content="#0B0B0D">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="loader" id="loader"><span class="logo"><span data-name>SABUSAB</span>.</span></div>
+
+  <!-- NAVBAR -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="logo"><span data-name>SABUSAB</span>.</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav__links" id="navLinks" aria-label="Main">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+        <a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home" data-section>
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="label">ASPIRING IT PROFESSIONAL</p>
+          <h1>Building the future, one idea at a time.</h1>
+          <p class="hero__intro">Hi, I'm <strong data-name>SABUSAB</strong>.</p>
+          <p class="hero__desc">I'm an IT student interested in technology and digital solutions. I learn by building real projects and I'm improving a little every day.</p>
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn--primary">Explore Projects</a>
+            <a href="#about" class="btn btn--ghost">More About Me</a>
+          </div>
+          <p class="hero__loc">Philippines</p>
+        </div>
+        <div class="hero__visual" id="heroVisual" aria-hidden="true">
+          <div class="orb">
+            <div class="ring ring--1"></div><div class="ring ring--2"></div><div class="ring ring--3"></div>
+            <div class="core"></div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-ind" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" data-section>
+      <div class="container">
+        <h2 class="reveal">About me</h2>
+        <div class="about reveal">
+          <p class="lead">I am an Information Technology student passionate about exploring technology, developing practical skills, and understanding how digital solutions can improve everyday experiences. I enjoy learning through hands-on projects and continuously challenging myself to grow in the field of IT.</p>
+          <div class="about__cards">
+            <article class="card"><h3>Education</h3><p>BS Information Technology, currently 2nd year.</p></article>
+            <article class="card"><h3>Interests</h3><p>Web development, databases, and building tools that solve real problems.</p></article>
+            <article class="card"><h3>How I learn</h3><p>Build first, break things, fix them, then understand why they work.</p></article>
+            <article class="card"><h3>Career goal</h3><p>Grow into a reliable IT professional who builds useful digital solutions.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section--alt" id="skills" data-section>
+      <div class="container">
+        <h2 class="reveal">Skills &amp; technologies</h2>
+        <p class="section__sub reveal">Only tools I have actually used or studied. Status shows how I use each one.</p>
+        <div class="skills">
+          <article class="card reveal"><h3>Programming</h3><ul class="chips">
+            <li>Python <em class="tag tag--used">Used in Projects</em></li>
+            <li>JavaScript <em class="tag tag--used">Used in Projects</em></li></ul></article>
+          <article class="card reveal"><h3>Frontend</h3><ul class="chips">
+            <li>HTML <em class="tag tag--used">Used in Projects</em></li>
+            <li>CSS <em class="tag tag--used">Used in Projects</em></li></ul></article>
+          <article class="card reveal"><h3>Backend</h3><ul class="chips">
+            <li>Flask <em class="tag tag--used">Used in Projects</em></li></ul></article>
+          <article class="card reveal"><h3>Database</h3><ul class="chips">
+            <li>MySQL <em class="tag tag--used">Used in Projects</em></li></ul></article>
+          <article class="card reveal"><h3>Development tools</h3><ul class="chips">
+            <li>Visual Studio Code <em class="tag tag--fam">Familiar With</em></li>
+            <li>Git <em class="tag tag--learn">Currently Learning</em></li>
+            <li>GitHub <em class="tag tag--learn">Currently Learning</em></li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" data-section>
+      <div class="container">
+        <h2 class="reveal">Featured projects</h2>
+        <div id="projectList">
+          <!-- To add a project: copy one <article class="project"> block below and edit it. -->
+          <article class="project project--featured reveal">
+            <a class="project__shot" href="#projects" aria-label="FoodHub screenshot">
+              <img src="assets/images/foodhub.gif" alt="FoodHub demo showing the ordering flow" onerror="this.remove()">
+              <span>Add your screenshot at<br><code>assets/images/foodhub.png</code></span>
+            </a>
+            <div class="project__body">
+              <p class="label">FEATURED PROJECT</p>
+              <h3>FoodHub</h3>
+              <p>An online food ordering and delivery system designed to connect customers, shops, and riders through one platform.</p>
+              <ul class="features">
+                <li>Customer ordering flow</li><li>Shop menu management</li><li>Rider delivery handling</li>
+              </ul>
+              <ul class="stack"><li>Python</li><li>Flask</li><li>MySQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <div class="project__links">
+                <a href="https://foodhub-1-eld8.onrender.com/" class="btn btn--primary" target="_blank" rel="noopener">Source Code</a>
+                <!-- <a href="#" class="btn btn--ghost" target="_blank" rel="noopener">Live Demo</a> -->
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="more reveal">More projects will be added as I build them.</p>
+      </div>
+    </section>
+
+    <!-- JOURNEY + EDUCATION -->
+    <section class="section section--alt" id="journey" data-section>
+      <div class="container">
+        <h2 class="reveal">Learning journey</h2>
+        <ol class="timeline">
+          <li class="reveal"><h3>Started learning programming</h3><p>Began with Python fundamentals.</p></li>
+          <li class="reveal"><h3>Explored web development</h3><p>Learned HTML, CSS, and JavaScript.</p></li>
+          <li class="reveal"><h3>Learned database management</h3><p>Worked with MySQL and relational data.</p></li>
+          <li class="reveal"><h3>Developed school projects</h3><p>Applied lessons to practical activities.</p></li>
+          <li class="reveal"><h3>Built FoodHub</h3><p>My first full web system using Flask and MySQL.</p></li>
+          <li class="reveal is-now"><h3>Still improving</h3><p>Practicing, building, and learning every week.</p></li>
+        </ol>
+
+        <div class="edu reveal">
+          <h3>Education</h3>
+          <p><strong>Bachelor of Science in Information Technology</strong></p>
+          <p>Current status: 2nd Year College</p>
+          <p class="muted">School: to be confirmed · Relevant coursework: to be added</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" data-section>
+      <div class="container contact reveal">
+        <h2>Let's build something together.</h2>
+        <p class="section__sub">Open to learning opportunities, collaborations, and internships.</p>
+        <a href="mailto:your.sabusabsherwin@gmail.com" class="btn btn--primary btn--lg">Send an email</a>
+        <ul class="socials">
+          <li><a href="https://github.com/sabusabsherwin-crypto" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#home" class="logo"><span data-name>SABUSAB</span>.</a>
+      <nav aria-label="Footer"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+      <p class="muted">&copy; <span id="year">2026</span> <span data-name>SABUSAB</span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">&#8593;</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

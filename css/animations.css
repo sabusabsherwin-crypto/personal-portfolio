@@ -1,0 +1,22 @@
+/* Loader */
+.loader{position:fixed;inset:0;background:var(--bg);display:grid;place-items:center;z-index:100;transition:opacity .6s ease,visibility .6s}
+.loader .logo{font-size:2.4rem;animation:pulse 1.2s ease-in-out infinite}
+.loader.is-done{opacity:0;visibility:hidden}
+@keyframes pulse{50%{opacity:.35}}
+
+/* Scroll reveal (hidden only when JS is running) */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .reveal.is-visible{opacity:1;transform:none}
+
+/* Hero motion */
+.ring--2{animation:spin 40s linear infinite}
+.ring--3{animation:spin 70s linear infinite reverse}
+.scroll-ind span{animation:scroll 1.6s ease-in-out infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes scroll{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .js .reveal{opacity:1;transform:none}
+}
