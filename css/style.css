@@ -57,9 +57,9 @@ p{color:var(--text-2)}
 .hero__cta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
 .hero__loc{font-size:.9rem}
 .hero__visual{display:grid;place-items:center;perspective:900px}
-.orb{--mx:0;--my:0;position:relative;width:min(420px,80%);aspect-ratio:1;transform:rotateY(calc(var(--mx)*12deg)) rotateX(calc(var(--my)*-12deg));transition:transform .2s ease-out;transform-style:preserve-3d}
+.orb{--mx:0;--my:0;--lx:-.4;--ly:-.5;position:relative;width:min(420px,80%);aspect-ratio:1;transform:rotateY(calc(var(--mx)*12deg)) rotateX(calc(var(--my)*-12deg));transition:transform .2s ease-out;transform-style:preserve-3d}
 .core{position:absolute;inset:18%;border-radius:50%;
-  background:radial-gradient(circle at calc(35% + var(--mx)*12%) calc(30% + var(--my)*12%),#e8eeff 0,#8fa9ff 14%,#3b55b8 40%,#10142a 72%,#07080f 100%);
+  background:radial-gradient(circle at calc(50% + var(--lx)*30%) calc(50% + var(--ly)*30%),#e8eeff 0,#8fa9ff 14%,#3b55b8 40%,#10142a 72%,#07080f 100%);
   box-shadow:0 0 90px -10px rgba(100,139,255,.55),inset -20px -30px 60px rgba(0,0,0,.6)}
 .ring{position:absolute;border-radius:50%;border:1px solid var(--border)}
 .ring--1{inset:6%;border-color:rgba(100,139,255,.35)}

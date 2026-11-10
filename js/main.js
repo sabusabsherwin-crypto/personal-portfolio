@@ -31,10 +31,15 @@ if (!reduce && matchMedia("(hover:hover)").matches) {
     cancelAnimationFrame(raf);
     raf = requestAnimationFrame(() => {
       const r = visual.getBoundingClientRect();
-      const x = (e.clientX - (r.left + r.width / 2)) / innerWidth * 2;
-      const y = (e.clientY - (r.top + r.height / 2)) / innerHeight * 2;
+      const cx = r.left + r.width / 2;
+      const cy = r.top + r.height / 2;
+      const dx = e.clientX - cx, dy = e.clientY - cy;
+      const x = Math.max(-1, Math.min(1, dx < 0 ? dx / cx : dx / (innerWidth - cx)));
+      const y = Math.max(-1, Math.min(1, dy < 0 ? dy / cy : dy / (innerHeight - cy)));
       orb.style.setProperty("--mx", x.toFixed(2));
       orb.style.setProperty("--my", y.toFixed(2));
+      orb.style.setProperty("--lx", x.toFixed(2));
+      orb.style.setProperty("--ly", y.toFixed(2));
     });
   });
 }
