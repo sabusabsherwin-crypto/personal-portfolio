@@ -29,3 +29,7 @@
   .footer__inner{flex-direction:column;align-items:flex-start}
   .project__body h3{font-size:1.8rem}
 }
+
+@media (min-width:761px) and (max-width:1000px){.nav__links{gap:1.2rem}}
+@media (max-width:900px){.about{grid-template-columns:1fr;gap:2rem}.about__photo{max-width:260px}}
+@media (max-width:560px){.facts{grid-template-columns:1fr}.contact__actions .btn{width:100%}}

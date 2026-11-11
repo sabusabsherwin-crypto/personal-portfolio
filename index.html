@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+  <div class="bg" aria-hidden="true"></div>
   <div class="loader" id="loader"><span class="logo"><span data-name>SABUSAB</span>.</span></div>
 
   <!-- NAVBAR -->
@@ -23,7 +24,7 @@
       <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
       <nav class="nav__links" id="navLinks" aria-label="Main">
         <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
-        <a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+        <a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -33,17 +34,17 @@
     <section class="hero" id="home" data-section>
       <div class="container hero__grid">
         <div class="hero__text">
-          <p class="label">ASPIRING IT PROFESSIONAL</p>
-          <h1>Building the future, one idea at a time.</h1>
-          <p class="hero__intro">Hi, I'm <strong data-name>SABUSAB</strong>.</p>
-          <p class="hero__desc">I'm an IT student interested in technology and digital solutions. I learn by building real projects and I'm improving a little every day.</p>
-          <div class="hero__cta">
+          <p class="label rise" style="--d:.1s">ASPIRING IT PROFESSIONAL</p>
+          <h1 data-split>Building the future, one idea at a time.</h1>
+          <p class="hero__intro rise" style="--d:.75s">Hi, I'm <strong data-name>SABUSAB</strong>.</p>
+          <p class="hero__desc rise" style="--d:.85s">I'm an IT student interested in technology and digital solutions. I learn by building real projects and I'm improving a little every day.</p>
+          <div class="hero__cta rise" style="--d:.95s">
             <a href="#projects" class="btn btn--primary">Explore Projects</a>
             <a href="#about" class="btn btn--ghost">More About Me</a>
           </div>
-          <p class="hero__loc">Philippines</p>
+          <p class="hero__loc rise" style="--d:1.05s">Philippines</p>
         </div>
-        <div class="hero__visual" id="heroVisual" aria-hidden="true">
+        <div class="hero__visual rise" style="--d:.3s" id="heroVisual" aria-hidden="true">
           <div class="orb">
             <div class="ring ring--1"></div><div class="ring ring--2"></div><div class="ring ring--3"></div>
             <div class="core"></div>
@@ -58,13 +59,22 @@
       <div class="container">
         <h2 class="reveal">About me</h2>
         <div class="about reveal">
+          <figure class="about__photo frame-anim"><img src="assets/images/profile.jpg" alt="Profile photo"></figure>
+          <div class="about__text">
           <p class="lead">I am an Information Technology student passionate about exploring technology, developing practical skills, and understanding how digital solutions can improve everyday experiences. I enjoy learning through hands-on projects and continuously challenging myself to grow in the field of IT.</p>
-          <div class="about__cards">
+          <ul class="facts">
+            <li><span>Studying</span>BS Information Technology</li>
+            <li><span>Year level</span>2nd year</li>
+            <li><span>Based in</span>Philippines</li>
+            <li><span>Focus</span>Web development and databases</li>
+          </ul>
+          </div>
+        </div>
+        <div class="about__cards reveal">
             <article class="card"><h3>Education</h3><p>BS Information Technology, currently 2nd year.</p></article>
             <article class="card"><h3>Interests</h3><p>Web development, databases, and building tools that solve real problems.</p></article>
             <article class="card"><h3>How I learn</h3><p>Build first, break things, fix them, then understand why they work.</p></article>
             <article class="card"><h3>Career goal</h3><p>Grow into a reliable IT professional who builds useful digital solutions.</p></article>
-          </div>
         </div>
       </div>
     </section>
@@ -74,6 +84,12 @@
       <div class="container">
         <h2 class="reveal">Skills &amp; technologies</h2>
         <p class="section__sub reveal">Only tools I have actually used or studied. Status shows how I use each one.</p>
+        <div class="filters reveal" role="group" aria-label="Filter skills">
+          <button class="is-on" data-filter="all">All</button>
+          <button data-filter="used">Used in Projects</button>
+          <button data-filter="fam">Familiar With</button>
+          <button data-filter="learn">Currently Learning</button>
+        </div>
         <div class="skills">
           <article class="card reveal"><h3>Programming</h3><ul class="chips">
             <li>Python <em class="tag tag--used">Used in Projects</em></li>
@@ -99,11 +115,12 @@
         <h2 class="reveal">Featured projects</h2>
         <div id="projectList">
           <!-- To add a project: copy one <article class="project"> block below and edit it. -->
-          <article class="project project--featured reveal">
-            <a class="project__shot" href="#projects" aria-label="FoodHub screenshot">
+          <article class="project project--featured frame-anim reveal" data-tilt>
+            <div class="browser"><div class="browser__bar"><i></i><i></i><i></i><span>foodhub-1-eld8.onrender.com</span></div>
+              <a class="project__shot" href="https://foodhub-1-eld8.onrender.com/" target="_blank" rel="noopener" aria-label="Open FoodHub live demo">
               <img src="assets/images/foodhub.gif" alt="FoodHub demo showing the ordering flow" onerror="this.remove()">
-              <span>Add your screenshot at<br><code>assets/images/foodhub.png</code></span>
-            </a>
+              <span>Add your demo at<br><code>assets/images/foodhub.gif</code></span>
+              </a></div>
             <div class="project__body">
               <p class="label">FEATURED PROJECT</p>
               <h3>FoodHub</h3>
@@ -132,7 +149,7 @@
             </div>
           </article>
         </div>
-        <p class="more reveal">More projects will be added as I build them.</p>
+        <div class="soon reveal"><h3>Next project</h3><p>In planning. More projects will be added as I build them.</p></div>
       </div>
     </section>
 
@@ -158,12 +175,28 @@
       </div>
     </section>
 
+    <!-- CERTIFICATES -->
+    <section class="section" id="certificates" data-section>
+      <div class="container">
+        <h2 class="reveal">Certificates &amp; achievements</h2>
+        <p class="section__sub reveal">Real certificates only. I will add them here as I earn them.</p>
+        <div class="certs">
+          <!-- To add one: copy this block, remove "cert--empty", and edit it.
+          <article class="card cert reveal"><img src="assets/images/cert-1.jpg" alt="Certificate title"><h3>Certificate title</h3><p>Issuer, year</p><a href="#" target="_blank" rel="noopener">View certificate</a></article> -->
+          <article class="card cert cert--empty reveal"><h3>Your first certificate</h3><p>Save the image in <code>assets/images/</code> and add a card here.</p></article>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section class="section" id="contact" data-section>
-      <div class="container contact reveal">
+      <div class="container contact frame-anim reveal">
         <h2>Let's build something together.</h2>
         <p class="section__sub">Open to learning opportunities, collaborations, and internships.</p>
-        <a href="mailto:your.sabusabsherwin@gmail.com" class="btn btn--primary btn--lg">Send an email</a>
+        <div class="contact__actions">
+          <a href="mailto:your.sabusabsherwin@gmail.com" class="btn btn--primary btn--lg">Send an email</a>
+          <button class="btn btn--ghost btn--lg" id="copyEmail" type="button">Copy email</button>
+        </div>
         <ul class="socials">
           <li><a href="https://github.com/sabusabsherwin-crypto" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a></li>

@@ -15,7 +15,16 @@
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes scroll{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
 
+/* Hero entrance */
+.js .rise{opacity:0;transform:translateY(16px)}
+.js.ready .rise{opacity:1;transform:none;transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
+.hero h1 .w>span{display:inline-block;transform:translateY(110%);transition:transform .9s var(--ease)}
+.js.ready .hero h1 .w>span{transform:none}
+
 @media (prefers-reduced-motion:reduce){
+  .js .rise,.hero h1 .w>span{opacity:1;transform:none}
+  .bg::before{animation:none}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
   .js .reveal{opacity:1;transform:none}
