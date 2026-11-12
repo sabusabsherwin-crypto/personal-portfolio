@@ -9,13 +9,18 @@ onScroll();
 addEventListener("scroll", onScroll, { passive: true });
 
 // Mobile menu
+const isOpen = () => links.classList.contains("is-open");
 const setMenu = open => {
   links.classList.toggle("is-open", open);
+  nav.classList.toggle("menu-open", open);
   toggle.setAttribute("aria-expanded", open);
+  toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
 };
-toggle.addEventListener("click", () => setMenu(!links.classList.contains("is-open")));
+toggle.addEventListener("click", () => setMenu(!isOpen()));
 navAnchors.forEach(a => a.addEventListener("click", () => setMenu(false)));
-addEventListener("keydown", e => e.key === "Escape" && setMenu(false));
+addEventListener("keydown", e => { if (e.key === "Escape" && isOpen()) { setMenu(false); toggle.focus(); } });
+document.addEventListener("click", e => { if (isOpen() && !nav.contains(e.target)) setMenu(false); });
+matchMedia("(min-width:761px)").addEventListener("change", e => { if (e.matches) setMenu(false); });
 
 // Active section tracking
 const sections = document.querySelectorAll("[data-section]");
